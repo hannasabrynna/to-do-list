@@ -1,6 +1,5 @@
 const inputBox =document.getElementById("input-box");
 const listContainer =document.getElementById("list-container");
-console.log("aqui")
 
 function addTask(){
     if(inputBox.value === ''){
@@ -9,7 +8,7 @@ function addTask(){
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
-        let span = document.createElement("span");
+        let span = document.createElement("span"); 
         span.innerHTML = "\u00d7";  //Adiciona um "X"
         li.appendChild(span);
     }
@@ -23,17 +22,17 @@ listContainer.addEventListener("click", function(e){
         e.target.classList.toggle("checked"); //O elemento sera marcado com checked
         saveData();
     }else if(e.target.tagName === "SPAN"){  //Se clicar no span (que é o "X")
-        e.target.parentElement.remove(); //Apaga elemento
+        e.target.parentElement.remove(); //Apaga a task
         saveData();
     }
 }, false);
 
-// Salva do navegador
+// Salva no navegador
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML);
 }
 
-// Mostra as Tasks quando fecharmos e abrirmos o navegador
+// Mostra as Tasks quando recarregarmos o navegador
 function showTask(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
