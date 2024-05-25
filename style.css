@@ -8,7 +8,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(135deg, #153677, #4e085f);
+    background-image: linear-gradient(135deg, #1A4D2E, #4F6F52);
     padding: 10px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .todo-app h2{
-    color: #002765;
+    color: #1A4D2E;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -56,7 +56,7 @@ button{
    border: none;
    outline: none;
    padding:  16px 50px;
-   background: #ff5945; 
+   background: #3EC70B; 
    color: #fff;
    font-size: 16px;
    cursor: pointer;
@@ -108,4 +108,24 @@ ul li span{
 }
 ul li span:hover{
    background: #edeef0; 
+}
+
+.footer{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footer-content {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.footer-content a {
+    color: #B5C0D0;
+    font-weight: bold; 
+    text-decoration: none;
 }
